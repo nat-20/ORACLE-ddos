@@ -10,4 +10,4 @@ These instructions will guide you to run the detection mechanism under an ONOS+P
 
 To run the DDoS detection system is needed to install at the virtual machine the following dependencies:
 
-- [ONOS](https://wiki.onosproject.org/display/ONOS/Development+Environment+Setup "ONOS")
+- [ONOS (2.2.0 or greater)](https://wiki.onosproject.org/display/ONOS/Development+Environment+Setup "ONOS")
