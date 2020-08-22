@@ -8,6 +8,21 @@ These instructions will guide you to run the detection mechanism under an ONOS+P
 
 ### Prerequisites
 
-To run the DDoS detection system is needed to install at the virtual machine the following dependencies:
+To run the DDoS detection system is needed to install at the virtual machine the following SDN controller:
 
 - [ONOS (2.2.0 or greater)](https://wiki.onosproject.org/display/ONOS/Development+Environment+Setup "ONOS")
+
+Builds and installs the following repositories needed for developing and testing P4 support in:
+
+- [BMv2](https://github.com/p4lang/behavioral-model) (P4 software switch)
+- [PI](https://github.com/p4lang/PI)
+- [p4c](https://github.com/p4lang/p4c) (P4 compiler)
+
+The best way to install the previus repositories is executing the tool that brings **ONOS**:
+
+```
+bash $ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh
+```
+
+##### Note:
+It is possible that in the middle of the tool execution could appear the next issue: "sudo: pip2.7: command not found". The solution is to open the file ($ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh) and change all "pip2.7" by "pip". Then run the file again.
