@@ -29,3 +29,7 @@ bash $ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh
 
 ##### Note:
 It is possible that in the middle of the tool execution could appear the next issue: "sudo: pip2.7: command not found". The solution is to open the file ($ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh) and change all "pip2.7" by "pip". Then, run the file again.
+
+## Prepering the TEST environment
+
+Firt, download this repository in the home
