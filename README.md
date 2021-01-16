@@ -35,6 +35,7 @@ It is possible that in the middle of the tool execution could appear the next is
 ```
 ONOS_APPS=drivers.bmv2,gui,org.p4.template ok clean
 ```
-- On a other terminal, download **ORACLE_ddos** repository into the home **(~/)** of you virtual machine. In the root of this new directory you can find a **Makefile** which containts the different commands needed to execute each part of the proyect in a easy way. The first        
-- 
+On a other terminal, download **ORACLE_ddos** repository into the home **(~/)** of you virtual machine. In the root of this new directory you can find a **Makefile** which containts the different commands needed to execute each part of the proyect in a easy way.      
+
+-asdfasdf 
 
