@@ -76,10 +76,9 @@ make mirror
 python3 API_REST_Clasificador.py 
 ```
 
-2. Download into the virtual machine the wordload from [here](https://drive.google.com/drive/folders/1UU23vmK1P-I9YjN7MXBa_MVSNNVBhfA1?usp=sharing). It is a .pcap file with 45 minutes of traffic where 10 minutes are of DDoS attack. All the packets are tagged (00:Benign, 11:DDoS) modifying the last two bits of the IPv4 ToS header field. This allows to compare the real flow tag with the given by the classificator.
-```
-python3 API_REST_Clasificador.py 
-```
+2. Download into the virtual machine the wordload from [here](https://drive.google.com/drive/folders/1UU23vmK1P-I9YjN7MXBa_MVSNNVBhfA1?usp=sharing). It is a .pcap file with 45 minutes of traffic where 10 minutes are of DDoS attack. On the other hand, all packets of this workliad were previously marked (00: Benign, 11: DDoS) modifying the last two bits of the IPv4 ToS header field. This allows to compare the real flow tag with the given by the classificator.
+
+The workload is a portion of  the traffic generated in the creation of the [CIC-IDS2017 dataset](https://www.unb.ca/cic/datasets/ids-2017.html).
 
 3. On the Terminal #2 must be active the mininet topology. Please open the terminal of the host **H1** putting the command: **xterm h1**. Then, change the network interface mtu value using the next command on the H1 terminal (**Terminal #4**):
 ```
