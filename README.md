@@ -72,3 +72,11 @@ python3 API_REST_Clasificador.py
 ```
 
 2. Download into the virtual machine the wordload from here. It is a .pcap file with 45 minutes of traffic where 10 minutes are of DDoS attack. All the packets are tagged (00:Benign, 11:DDoS) modifying the last two bits of the IPv4 ToS header field. This allows to compare the real flow tag with the given by the classificator.
+```
+python3 API_REST_Clasificador.py 
+```
+
+3. On the Terminal #2 must be active the mininet topology. Please open the terminal of the host **H1** putting the command: **xterm h1**. Then, change the network interface mtu value using the next command on h1 terminal:
+```
+ifconfig h1-eth0 mtu 12000
+```
