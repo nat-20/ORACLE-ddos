@@ -31,6 +31,9 @@ bash $ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh
 It is possible that in the middle of the tool execution could appear the next issue: "sudo: pip2.7: command not found". The solution is to open the file ($ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh) and change all "pip2.7" by "pip". Then, run the file again.
 
 ## Preparing the environment
+
+![](https://github.com/sebitas0623/ORACLE_ddos/blob/master/images/DESappP4GitHub.png)
+
 1. Run the ONOS controller activating only the APPs required by the implementation. These applications are the bmv2-driver, gui, and the custom application in charge of the extraction of the flow information and the features calculation. Although, the last one mentioned is not installed yet into the ONOS, at the moment to be done it, the application is activivated automaticly. To run the ONOS controller, you must be located in **~/onos** directory. Then, execute the next command on a terminal (**Terminal #1**):  
 ```
 ONOS_APPS=drivers.bmv2,gui,org.p4.template ok clean
