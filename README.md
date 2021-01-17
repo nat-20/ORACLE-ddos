@@ -7,7 +7,7 @@ ORACLE: c**O**llabo**R**ation of d**A**ta and **C**ontrol p**L**an**E**s to dete
 
 ## Getting Started
 
-These instructions will guide you to run the detection mechanism under an ONOS+P4 experimental scenario. We recommend using an Ubuntu 18.04 virtual machine.
+These instructions will guide you to run the detection mechanism under an ONOS+P4 experimental scenario. We recommend using an Ubuntu 18.04 virtual machine over a host machine with at least 12 GB of RAM and core i5 or ryzen 5 processor.
 
 ### Prerequisites
 
