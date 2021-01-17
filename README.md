@@ -43,10 +43,20 @@ make p4
 ```
 If the compilation was successful, the p4 compilator crates a new folder (**./p4src/build**) with two files (**bmv2.json** and **p4info.txt**). Make sure that the compilation does not show any error.
 
-3. The next step is to package together all the project as an ONOS application (.oar). This package, named p4.template.oar, will contain the Pepilene, the custom module, and the P4 application already compilated. After that, it must be installed in ONOS using the interface provided. To do that, you just need execute the follow make command:
+3. The next step is to package together all the project as an ONOS application (.oar). This package, named **org.p4.template.oar**, will contain the Pepilene, the custom module, and the P4 application already compilated. After that, it must be installed in ONOS using the interface provided. To do that, you just need execute the follow make command (the process can be watched in real-time in the ONOS logs):
 ```
 make fast
 ```
 
-4.
+4. Creat the mininet topology, It will be conformed by a only BMv2 switch and two hosts diretly connected. For creating the topology, execute the next make command being into **/topop4** folder.
+```
+make topo
+```
 
+5. On a new terminal and being located into the **/top 4** folder, send the bmv2-s1-netcfg.json file to ONOS controller. This file is created at the moment that the topology is launched and contents the switch interface information.
+```
+make netcfg
+```
+Once the netcfg file arrive to the controller, a communication channel  is stablished between ONOS  and the switch. Then, the P4 application is installed immediately at the switch (This can be watched at the ONOS logs).
+
+6. 
