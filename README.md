@@ -71,4 +71,4 @@ make mirror
 python3 API_REST_Clasificador.py 
 ```
 
-2. Download into the virtual machine the wordload from here. It is a .pcap file with 45 minutes of traffic where 10 minutes are of DDoS attack. All the packets are tagged with the objective of be possible comparing the real flow tag with the given by the classificator.
+2. Download into the virtual machine the wordload from here. It is a .pcap file with 45 minutes of traffic where 10 minutes are of DDoS attack. All the packets are tagged (00:Benign, 11:DDoS) modifying the last two bits of the IPv4 ToS header field. This allows to compare the real flow tag with the given by the classificator.
