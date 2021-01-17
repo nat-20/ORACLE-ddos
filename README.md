@@ -76,7 +76,9 @@ python3 API_REST_Clasificador.py
 python3 API_REST_Clasificador.py 
 ```
 
-3. On the Terminal #2 must be active the mininet topology. Please open the terminal of the host **H1** putting the command: **xterm h1**. Then, change the network interface mtu value using the next command on h1 terminal:
+3. On the Terminal #2 must be active the mininet topology. Please open the terminal of the host **H1** putting the command: **xterm h1**. Then, change the network interface mtu value using the next command on the h1 terminal (**Terminal #4**):
 ```
 ifconfig h1-eth0 mtu 12000
 ```
+
+4. H1 is the 
