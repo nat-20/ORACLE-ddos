@@ -66,4 +66,7 @@ make mirror
 
 ## Running
 
-1. The first step to run the a test is executing the service of flows classification. Go the ML_model folder where you will find a python script named **API_REST_Clasificador.py**. This script loads the classification model (RF or KNN) and stays waiting for flows classification requests sent by the ONOS controler. This also shows at the terminal the classification result for each group of flows, and the accuracy score aggregated. 
+1. The first step to run the a test is executing the flows classification service. Go the ML_model folder where you will find a python script named **API_REST_Clasificador.py**. This script loads the classification model (RF or KNN) and stays waiting for flows classification requests sent by the ONOS controler. This also shows at the terminal the classification result for each group of flows, and the accuracy score aggregated. The classification service is execute as follow: 
+```
+python3 API_REST_Clasificador.py 
+```
