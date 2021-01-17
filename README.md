@@ -76,9 +76,12 @@ python3 API_REST_Clasificador.py
 python3 API_REST_Clasificador.py 
 ```
 
-3. On the Terminal #2 must be active the mininet topology. Please open the terminal of the host **H1** putting the command: **xterm h1**. Then, change the network interface mtu value using the next command on the h1 terminal (**Terminal #4**):
+3. On the Terminal #2 must be active the mininet topology. Please open the terminal of the host **H1** putting the command: **xterm h1**. Then, change the network interface mtu value using the next command on the H1 terminal (**Terminal #4**):
 ```
 ifconfig h1-eth0 mtu 12000
 ```
 
-4. H1 is the 
+4. H1 host will reproduce the workload through **tcpreplay**. Execute the next command on Terminal #4. you must be located at the folder that contains the workload:
+```
+sudo tcpreplay -i h1-eth0 R_Test_pares.pcap
+```
