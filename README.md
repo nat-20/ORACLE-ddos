@@ -1,6 +1,8 @@
 # ORACLE_ddos
 
-ORACLE: c**O**llabo**R**ation of d**A**ta and **C**ontrol p**L**an**E**s to detect DDoS attacks in a Software-Defined Networking (SDN) architecture. This DDoS detection system is composed by two modules: a control plane implementation developed in an **ONOS** controller, and a data plane implementation developed using the **P4 lenguage**.  In order to communicate both planes is used the **P4Runtime** interface which allows controlling in real-time the data plane elements of a p4 device. The following image shows the operating architecture of the detection system. On the right side of the image we can see the repository folders distribution where you can associate the folder color with a specific part of the architecute.  
+ORACLE: c**O**llabo**R**ation of d**A**ta and **C**ontrol p**L**an**E**s to detect DDoS attacks in a Software-Defined Networking (SDN) architecture. This DDoS detection system is composed by two modules: a control plane implementation developed in an **ONOS** controller, and a data plane implementation developed using the **P4 lenguage**.  In order to communicate both planes is used the **P4Runtime** interface which allows controlling in real-time the data plane elements of a p4 device. For more information about ORACLE, read and cite the original [paper](https://arxiv.org/pdf/2009.10798.pdf).
+
+The following image shows the operating architecture of the detection system. On the right side of the image we can see the repository folders distribution where you can associate the folder color with a specific part of the architecute.  
 
 ![](https://github.com/sebitas0623/ORACLE_ddos/blob/master/images/Archit.png)
 
