@@ -31,11 +31,11 @@ bash $ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh
 It is possible that in the middle of the tool execution could appear the next issue: "sudo: pip2.7: command not found". The solution is to open the file ($ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh) and change all "pip2.7" by "pip". Then, run the file again.
 
 ## Preparing the environment
-1. Run the ONOS controller activating only the APPs required by the implementation. These applications are the bmv2-driver, gui, and the custom application in charge of the extraction of the flow information and the features calculation. Although, the last one mentioned is not installed yet into the ONOS, at the moment to be done it, the application is activivated automaticly. To run the ONOS controller, you must be located in **~/onos** directory. Then, execute the next command on a terminal:  
+1. Run the ONOS controller activating only the APPs required by the implementation. These applications are the bmv2-driver, gui, and the custom application in charge of the extraction of the flow information and the features calculation. Although, the last one mentioned is not installed yet into the ONOS, at the moment to be done it, the application is activivated automaticly. To run the ONOS controller, you must be located in **~/onos** directory. Then, execute the next command on a terminal (**Terminal #1**):  
 ```
 ONOS_APPS=drivers.bmv2,gui,org.p4.template ok clean
 ```
-On a other terminal, download **ORACLE_ddos** repository into the home **(~/)** of you virtual machine. In the root of this new directory you can find a **Makefile** which containts the different commands needed to execute each part of the proyect in a easy way.      
+On a other terminal (**Terminal #2**), download **ORACLE_ddos** repository into the home **(~/)** of you virtual machine. In the root of this new directory you can find a **Makefile** which containts the different commands needed to execute each part of the proyect in a easy way.      
 
 2. Get into the ORACLE ddos folder and compile the p4 application with the follow Make command:
 ```
@@ -43,7 +43,7 @@ make p4
 ```
 If the compilation was successful, the p4 compilator crates a new folder (**./p4src/build**) with two files (**bmv2.json** and **p4info.txt**). Make sure that the compilation does not show any error.
 
-3. The next step is to package together all the project as an ONOS application (.oar). This package, named **org.p4.template.oar**, will contain the Pepilene, the custom module, and the P4 application already compilated. After that, it must be installed in ONOS using the interface provided. To do that, you just need execute the follow make command (the process can be watched in real-time in the ONOS logs):
+3. The next step is to package together all the project as an ONOS application (.oar). This package, named **org.p4.template.oar**, will contain the Pepilene, the custom module, and the P4 application already compilated. After that, it must be installed in ONOS using the interface provided. To do that, you just need execute the follow make command (the process can be watched in real-time in the ONOS logs or at the terminal #2):
 ```
 make fast
 ```
@@ -53,11 +53,11 @@ make fast
 make topo
 ```
 
-5. On a new terminal and being located into the **/topoP4** folder, send the bmv2-s1-netcfg.json file to ONOS controller. This file is created at the moment that the topology is launched and contents the switch interface information.
+5. On a new terminal (**Terminal #3**) and being located into the **/topoP4** folder, send the bmv2-s1-netcfg.json file to ONOS controller. This file is created at the moment that the topology is launched and contents the switch interface information.
 ```
 make netcfg
 ```
-Once the netcfg file arrive to the controller, a communication channel  is stablished between ONOS  and the switch. Then, the P4 application is installed immediately at the switch (This can be watched at the ONOS logs).
+Once the netcfg file arrive to the controller, a communication channel  is stablished between ONOS  and the switch. Then, the P4 application is installed immediately at the switch (This can be watched at the ONOS logs or at the terminal #2).
 
 6. Install the CLONE SESSION ID to be possible cloning packets at the switch. Execute the next Make command being located also into the /topoP4 folder.
 ```
@@ -66,3 +66,4 @@ make mirror
 
 ## Running
 
+1. 
