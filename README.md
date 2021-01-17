@@ -1,6 +1,6 @@
 # ORACLE
 
-ORACLE: c**O**llabo**R**ation of d**A**ta and **C**ontrol p**L**an**E**s to detect DDoS attacks in a Software-Defined Networking (SDN) architecture. This DDoS detection system is composed by two modules: a control plane implementation developed in an **ONOS** controller, and a data plane implementation developed using the **P4 lenguage**.  In order to communicate both planes is used the **P4Runtime** interface which allows controlling in real-time the data plane elements of a p4 device. The following image shows the operating architecture of the detection system. On the right side of the image we can see the repository files distribution where you can associate the file color with a specific part of the architecute.  
+ORACLE: c**O**llabo**R**ation of d**A**ta and **C**ontrol p**L**an**E**s to detect DDoS attacks in a Software-Defined Networking (SDN) architecture. This DDoS detection system is composed by two modules: a control plane implementation developed in an **ONOS** controller, and a data plane implementation developed using the **P4 lenguage**.  In order to communicate both planes is used the **P4Runtime** interface which allows controlling in real-time the data plane elements of a p4 device. The following image shows the operating architecture of the detection system. On the right side of the image we can see the repository folders distribution where you can associate the folder color with a specific part of the architecute.  
 
 ![](https://github.com/sebitas0623/ORACLE_ddos/blob/master/images/Archit.png)
 
@@ -30,7 +30,7 @@ bash $ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh
 ##### Note:
 It is possible that in the middle of the tool execution could appear the next issue: "sudo: pip2.7: command not found". The solution is to open the file ($ONOS_ROOT/tools/dev/p4vm/install-p4-tools.sh) and change all "pip2.7" by "pip". Then, run the file again.
 
-## Prepering the TEST environment
+## Preparing the TEST environment
 1. Run the ONOS controller activating only the APPs required by the implementation. These applications are the bmv2-driver, gui, and the custom application in charge of the extraction of the flow information and the features calculation. Although, the last one mentioned is not installed yet into the ONOS, at the moment to be done it, the application is activivated automaticly. To run the ONOS controller, you must be located in **~/onos** directory. Then, execute the next command on a terminal:  
 ```
 ONOS_APPS=drivers.bmv2,gui,org.p4.template ok clean
@@ -43,5 +43,10 @@ make p4
 ```
 If the compilation was successful, the p4 compilator crates a new folder (**./p4src/build**) with two files (**bmv2.json** and **p4info.txt**). Make sure that the compilation does not show any error.
 
-3. 
+3. The next step is to package together all the project as an ONOS application (.oar). This package, named p4.template.oar, will contain the Pepilene, the custom module, and the P4 application already compilated. After that, it must be installed in ONOS using the interface provided. To do that, you just need execute the follow make command:
+```
+make fast
+```
+
+4.
 
