@@ -40,7 +40,7 @@ It is possible that in the middle of the tool execution could appear the next is
 ```
 ONOS_APPS=drivers.bmv2,gui,org.p4.template ok clean
 ```
-On a other terminal (**Terminal #2**), download **ORACLE_ddos** repository into the home **(~/)** of you virtual machine. In the root of this new directory you can find a **Makefile** which containts the different commands needed to execute each part of the proyect in a easy way.      
+On another terminal (**Terminal #2**), download **ORACLE_ddos** repository into the home **(~/)** of you virtual machine. In the root of this new directory you can find a **Makefile** which containts the different commands needed to execute each part of the proyect in a easy way.      
 
 2. Get into the ORACLE ddos folder and compile the p4 application with the follow Make command:
 ```
