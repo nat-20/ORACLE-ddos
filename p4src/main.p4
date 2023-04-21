@@ -347,20 +347,7 @@ control c_ingress(inout headers_t hdr,
 
 
     action clone_to_cpu() {
-        clone3(CloneType.I2E, CPU_CLONE_SESSION_ID, 
-            {standard_metadata.instance_type, standard_metadata.ingress_port,
-                meta.NumFlowsByPacket,
-                meta.Flow1,
-                meta.Flow2,
-                meta.Flow3,
-                meta.Flow4,
-                meta.Flow5,
-                meta.Flow6,
-                meta.Flow7,
-                meta.Flow8,
-                meta.Flow9,
-                meta.Flow10
-            });
+        clone_preserving_field_list(CloneType.I2E, CPU_CLONE_SESSION_ID,1);
     }
 
 
@@ -380,8 +367,8 @@ control c_ingress(inout headers_t hdr,
         standard_metadata.egress_spec = port;
     }
     action _drop() {
-        //mark_to_drop(standard_metadata);
-	mark_to_drop();
+        mark_to_drop(standard_metadata);
+	//mark_to_drop();
     }
 
     table t_l2_fwd {

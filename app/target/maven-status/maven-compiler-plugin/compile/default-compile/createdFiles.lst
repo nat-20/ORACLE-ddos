@@ -1,6 +1,6 @@
 org/p4/onos/template/pipeconf/PipelinerImpl.class
-org/p4/onos/template/AppConstants.class
 org/p4/onos/template/cli/MyCommand.class
+org/p4/onos/template/AppConstants.class
 org/p4/onos/template/pipeconf/PipelinerImpl$2.class
 org/p4/onos/template/pipeconf/PipeconfLoader.class
 org/p4/onos/template/MainComponent.class

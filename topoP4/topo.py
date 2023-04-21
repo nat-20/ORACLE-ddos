@@ -14,6 +14,7 @@ from mininet.node import RemoteController
 from mininet.topo import Topo
 
 from bmv2 import ONOSBmv2Switch, ONOSHost
+from stratum import StratumBmv2Switch
 
 CPU_PORT = 255
 pipeconf_name = "org.p4.template"
@@ -35,7 +36,7 @@ class TutorialTopo(Topo):
     def __init__(self, *args, **kwargs):
         Topo.__init__(self, *args, **kwargs)
 
-        s1 = self.addSwitch('s1', cls=ONOSBmv2Switch, grpcport=50001, thriftport=60004,
+        s1 = self.addSwitch('s1', cls=StratumBmv2Switch, grpcport=50001, thriftport=60004,
                                cpuport=CPU_PORT, pipeconf=pipeconf_name, loglevel=loglevel1) 
 
         # IPv4 switches

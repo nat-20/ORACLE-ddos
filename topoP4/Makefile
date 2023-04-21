@@ -15,7 +15,7 @@ topo: reset
 
 netcfg:
 	$(info ************ PUSHING NETCFG TO ONOS ************)
-	-onos-netcfg ${OCI} bmv2-s1-netcfg.json 
+	-/opt/onos/bin/onos-netcfg ${OCI} bmv2-s1-netcfg.json 
 	#-onos-netcfg ${OCI} bmv2-s2-netcfg.json
 	#-onos-netcfg ${OCI} bmv2-s3-netcfg.json
 

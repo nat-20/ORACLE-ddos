@@ -1,4 +1,4 @@
-ONOS_VERSION = 2.1.0
+ONOS_VERSION = 4.2.9
 ONOS_MD5 = 6ca21242cf837a726cfbcc637107026b
 ONOS_URL = http://repo1.maven.org/maven2/org/onosproject/onos-releases/$(ONOS_VERSION)/onos-$(ONOS_VERSION).tar.gz
 ONOS_TAR_PATH = ~/onos.tar.gz
@@ -24,7 +24,8 @@ $(APP_OAR):
 
 app-reload: $(APP_OAR)
 	$(info ************ RELOADING ONOS APP ************)
-	onos-app $(OCI) reinstall! app/target/template-1.0-SNAPSHOT.oar
+	/opt/onos/bin/onos-app $(OCI) reinstall! app/target/template-1.0-SNAPSHOT.oar
+	#onos-create-app app com.foo bar app/target/template-1.0-SNAPSHOT.oar com.foo.bar
 
 test-all:
 	$(info ************ RUNNING ALL PTF TESTS ************)

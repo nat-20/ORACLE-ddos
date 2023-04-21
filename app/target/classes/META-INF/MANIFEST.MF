@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1598408982896
-Build-Jdk: 1.8.0_212
-Built-By: sdn
+Bnd-LastModified: 1681254226718
+Build-Jdk: 11.0.18
+Built-By: ubuntu
 Bundle-Description: P4-ONOS Template
 Bundle-ManifestVersion: 2
 Bundle-Name: template
@@ -11,16 +11,16 @@ Created-By: Apache Maven Bundle Plugin
 Export-Package: org.p4.onos.template;uses:="org.onosproject.event,org.on
  osproject.net,org.onosproject.net.config,org.onosproject.net.device,org
  .onosproject.net.packet,org.onosproject.net.pi.model,org.p4.onos.templa
- te.pipeconf";version="1.0.0",org.p4.onos.template.common;uses:="org.ono
- sproject.core,org.onosproject.net,org.onosproject.net.flow,org.onosproj
- ect.net.flow.criteria,org.onosproject.net.group,org.onosproject.net.pi.
- runtime";version="1.0.0",org.p4.onos.template.pipeconf;uses:="org.onosp
- roject.net,org.onosproject.net.behaviour,org.onosproject.net.driver,org
- .onosproject.net.flow,org.onosproject.net.flow.criteria,org.onosproject
- .net.flowobjective,org.onosproject.net.packet,org.onosproject.net.pi.mo
- del,org.onosproject.net.pi.runtime";version="1.0.0",org.p4.onos.templat
- e.cli;uses:="org.apache.karaf.shell.api.action,org.apache.karaf.shell.a
- pi.action.lifecycle,org.onosproject.cli";version="1.0.0"
+ te.pipeconf";version="1.0.0",org.p4.onos.template.cli;uses:="org.apache
+ .karaf.shell.api.action,org.apache.karaf.shell.api.action.lifecycle,org
+ .onosproject.cli";version="1.0.0",org.p4.onos.template.common;uses:="or
+ g.onosproject.core,org.onosproject.net,org.onosproject.net.flow,org.ono
+ sproject.net.flow.criteria,org.onosproject.net.group,org.onosproject.ne
+ t.pi.runtime";version="1.0.0",org.p4.onos.template.pipeconf;uses:="org.
+ onosproject.net,org.onosproject.net.behaviour,org.onosproject.net.drive
+ r,org.onosproject.net.flow,org.onosproject.net.flow.criteria,org.onospr
+ oject.net.flowobjective,org.onosproject.net.packet,org.onosproject.net.
+ pi.model,org.onosproject.net.pi.runtime";version="1.0.0"
 Import-Package: com.google.common.base;version="[22.0,23)",com.google.co
  mmon.cache;version="[22.0,23)",com.google.common.collect;version="[22.0
  ,23)",org.apache.karaf.shell.api.action;version="[4.2,5)",org.apache.ka

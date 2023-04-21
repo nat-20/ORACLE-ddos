@@ -27,6 +27,7 @@ typedef bit<344> StatLen;
 // carry the original ingress port where the packet was received.
 @controller_header("packet_in")
 header packet_in_header_t {
+    @field_list(1)
     bit<9> ingress_port;
     bit<7> _padding;
 } // 2 bytes
@@ -170,6 +171,7 @@ struct metadata_t {
     bit<40> TotLenSquareM2;
 
     bit<16> WindowNumM;
+    @field_list(1)
     bit<8> NumFlowsByPacket;
     bit<48> FlowDurationM;
     bit<48> TotIATM;
@@ -177,15 +179,25 @@ struct metadata_t {
     bit<1>  tagM;
 
     //-------
+    @field_list(1)
     StatLen Flow1;
+    @field_list(1)
     StatLen Flow2;
+    @field_list(1)
     StatLen Flow3;
+    @field_list(1)
     StatLen Flow4;
+    @field_list(1)
     StatLen Flow5;
+    @field_list(1)
     StatLen Flow6;
+    @field_list(1)
     StatLen Flow7;
+    @field_list(1)
     StatLen Flow8;
+    @field_list(1)
     StatLen Flow9;
+    @field_list(1)
     StatLen Flow10;    
 }
 
